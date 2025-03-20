@@ -17,6 +17,7 @@ $(document).ready(function () {
       return;
     }
     if (confirm('本当にこのページを離脱しますか？')) {
+      // 一度出したら同一セッション内では表示しないようにするため
       sessionStorage.setItem('hashStorage', true);
       history.back(); // Yes → 前のページに戻る
     } else {
